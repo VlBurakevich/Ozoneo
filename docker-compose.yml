@@ -1,0 +1,22 @@
+version: '3.9'
+
+services:
+  user-service:
+    build:
+      context: ./user-service
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8080"
+    depends_on:
+      - user-service-db
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://user-service-db:5432/user-service-database
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=root
+  user-service-db:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_DB: user-service-database
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root

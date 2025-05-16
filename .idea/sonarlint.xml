@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SonarLintProjectSettings">
+    <option name="moduleMapping">
+      <map>
+        <entry key="cart-service" value="product-service" />
+        <entry key="product-service" value="product-service (1)" />
+        <entry key="user-service" value="authentication-service" />
+      </map>
+    </option>
+  </component>
+</project>

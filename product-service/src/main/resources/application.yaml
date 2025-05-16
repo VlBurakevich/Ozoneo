@@ -1,0 +1,17 @@
+spring:
+  liquibase:
+    change-log: classpath:/db/changelog/db.changelog-master.yaml
+
+  jpa:
+    open-in-view: true
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql:
+        ddl-auto: validate
+  datasource:
+    url: jdbc:postgres://db:5432/product-service-database
+jwt:
+  secret:
+    key: 045Pg0+Uh2FPNTgus9OeZ83npvpAROFtcHuNsvk4Ej0=
+  lifetime: 3600000

@@ -7,6 +7,7 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Getter
 @Setter
@@ -17,8 +18,8 @@ public class ProductInfoDto {
     private String name;
     private String description;
     private BigDecimal price;
-    private CategoryDto category;
-    //product Image
+    private List<CategoryDto> category;
+    private List<ProductImageDto> images;
     private Integer stockQuantity;
     private String brand;
     private Boolean isActive;

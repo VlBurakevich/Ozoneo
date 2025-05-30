@@ -15,5 +15,5 @@ public class ProductPreviewDto {
     private Long id;
     private String name;
     private BigDecimal price;
-    private String url;
+    private String imageUrl;
 }

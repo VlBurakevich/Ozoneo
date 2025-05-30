@@ -1,9 +1,16 @@
 package com.example.productservice.dto.response;
 
-@
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class ProductImageDto {
     private Long id;
-    private Long productId;
     private String imageUrl;
-    private ProductImageDto parentProductImageDto;
+    private Integer sortOrder;
 }
